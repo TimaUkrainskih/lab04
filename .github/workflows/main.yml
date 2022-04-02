@@ -1,4 +1,8 @@
-name: build
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
 on: [push]
 
 jobs:
@@ -15,14 +19,12 @@ jobs:
            cd formatter_lib/
            cmake -H. -B_build
            cmake --build _build
-           
       - name: formatter_ex_lib
         shell: bash
         run: |
            cd formatter_ex_lib/
            cmake -H. -B_build
            cmake --build _build
-           
       - name: hw_app
         shell: bash
         run: |
